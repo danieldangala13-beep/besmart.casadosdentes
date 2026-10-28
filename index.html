@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Conheça a Casa dos Dentes. Saiba mais sobre os cuidados de saúde oral, os nossos serviços e como solicitar uma marcação."
+    >
+    <meta name="theme-color" content="#0B2239">
+
+    <title>Casa dos Dentes | Saúde e Sorriso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho" id="inicio">
+        <div class="contentor cabecalho-conteudo">
+
+            <a class="marca" href="#inicio" aria-label="Casa dos Dentes - Início">
+                <img
+                    src="./imagens/Gemini_Generated_Image_vyfe69vyfe69vyfe.jpg"
+                    alt="Logótipo da Casa dos Dentes"
+                    class="logotipo"
+                >
+                <span class="marca-texto">Casa dos Dentes</span>
+            </a>
+
+            <button
+                class="botao-menu"
+                id="botao-menu"
+                type="button"
+                aria-label="Abrir menu"
+                aria-controls="menu-principal"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-principal" id="menu-principal" aria-label="Menu principal">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#equipa">A nossa equipa</a>
+                <a href="#contactos">Contactos</a>
+
+                <a href="#marcacao" class="botao botao-menu-consulta">
+                    Marcar consulta
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- CARROSSEL PRINCIPAL -->
+        <section class="hero" aria-label="Apresentação da clínica">
+
+            <div class="hero-slides" id="hero-slides">
+
+                <!-- SLIDE 1 -->
+                <article class="hero-slide ativo">
+                    <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/If6p6HkeHThFzX4cGkmXKn/sandbox/u79WFkWnoWKCDQfEPVUOtU_1792961213194_na1fn_L2hvbWUvdWJ1bnR1L291dHB1dHMvY2Fycm9zc2VsX2hvcml6b250YWxfZXF1aXBhX2NsaW5pY2E.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1794700800&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSWY2cDZIa2VIVGhGelg0Y0drbVhLbi9zYW5kYm94L3U3OVdGa1dub1dLQ0RRZkVQVlVPdFVfMTc5Mjk2MTIxMzE5NF9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDI5MWRIQjFkSE12WTJGeWNtOXpjMlZzWDJodmNtbDZiMjUwWVd4ZlpYRjFhWEJoWDJOc2FXNXBZMkUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfNDA5NixoXzQwOTYvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk0NzAwODAwfX19XX0_&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEUCIB6PbKDAQPUBoux6uHtjb3p3pgh0CIdQaVjc8YV2fZmmAiEA8wBs5qpqQhdZow4XqvjMO55gn5wvHpf3WTLGHERHOJ4_"
+                        alt="Interior moderno de uma clínica dentária"
+                        class="hero-imagem"
+                        fetchpriority="high"
+                    >
+
+                    <div class="hero-sobreposicao"></div>
+
+                    <div class="contentor hero-conteudo">
+                        <span class="etiqueta-hero">
+                            CASA DOS DENTES
+                        </span>
+
+                        <h1>
+                            Um sorriso saudável começa com os cuidados certos.
+                        </h1>
+
+                        <p>
+                            A saúde oral merece atenção, prevenção e
+                            acompanhamento profissional.
+                        </p>
+
+                        <div class="hero-botoes">
+                            <a href="#servicos" class="botao botao-principal">
+                                Conhecer os serviços
+                            </a>
+
+                            <a href="#contactos" class="botao botao-secundario">
+                                Falar connosco
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SLIDE 2 -->
+                <article class="hero-slide">
+                    <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/If6p6HkeHThFzX4cGkmXKn/sandbox/t4QN3mz7Y8TivVFBg2tbCp_1792960465267_na1fn_L2hvbWUvdWJ1bnR1L291dHB1dHMvY2Fycm9zc2VsX2hvcml6b250YWxfcGVzc29hc19kaXJlaXRhX2F0ZW5kaW1lbnRv.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1794700800&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSWY2cDZIa2VIVGhGelg0Y0drbVhLbi9zYW5kYm94L3Q0UU4zbXo3WThUaXZWRkJnMnRiQ3BfMTc5Mjk2MDQ2NTI2N19uYTFmbl9MMmh2YldVdmRXSjFiblIxTDI5MWRIQjFkSE12WTJGeWNtOXpjMlZzWDJodmNtbDZiMjUwWVd4ZmNHVnpjMjloYzE5a2FYSmxhWFJoWDJGMFpXNWthVzFsYm5Sdi5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd180MDk2LGhfNDA5Ni9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQ3MDA4MDB9fX1dfQ__&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEQCIEZ3EThBJ771bRQy1jjSa3zhXLs2ZpNZw4u9ZCWhZSdwAiA3SeZttPBisWEqO~nzYZrTCVotIJC1Z~NP76TYsUxRIw__"
+                        alt="Equipamentos e cuidados de saúde oral"
+                        class="hero-imagem"
+                        loading="lazy"
+                    >
+
+                    <div class="hero-sobreposicao"></div>
+
+                    <div class="contentor hero-conteudo">
+                        <span class="etiqueta-hero">
+                            CUIDADOS PERSONALIZADOS
+                        </span>
+
+                        <h2>
+                            Cada sorriso merece atenção individual.
+                        </h2>
+
+                        <p>
+                            Conheça os cuidados disponíveis e esclareça
+                            as suas dúvidas com profissionais de saúde oral.
+                        </p>
+
+                        <div class="hero-botoes">
+                            <a href="#sobre" class="botao botao-principal">
+                                Conhecer a clínica
+                            </a>
+
+                            <a href="#marcacao" class="botao botao-secundario">
+                                Solicitar marcação
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SLIDE 3 -->
+                <article class="hero-slide">
+                    <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/If6p6HkeHThFzX4cGkmXKn/sandbox/t4QN3mz7Y8TivVFBg2tbCp_1792960465286_na1fn_L2hvbWUvdWJ1bnR1L291dHB1dHMvY2Fycm9zc2VsX2hvcml6b250YWxfcGVzc29hc19kaXJlaXRhX2NvbnN1bHRh.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1794700800&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSWY2cDZIa2VIVGhGelg0Y0drbVhLbi9zYW5kYm94L3Q0UU4zbXo3WThUaXZWRkJnMnRiQ3BfMTc5Mjk2MDQ2NTI4Nl9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDI5MWRIQjFkSE12WTJGeWNtOXpjMlZzWDJodmNtbDZiMjUwWVd4ZmNHVnpjMjloYzE5a2FYSmxhWFJoWDJOdmJuTjFiSFJoLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzQwOTYsaF80MDk2L2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5NDcwMDgwMH19fV19&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEQCIHTPr73Vzh8R8QpZlOuBmQE6c~Iiw~1XL1J6Sa8YCRoaAiBArwjDE82488VVVEkohA6GSc7E23OBwW-liX6KHmMrsg__"
+                        alt="Atendimento de saúde oral"
+                        class="hero-imagem"
+                        loading="lazy"
+                    >
+
+                    <div class="hero-sobreposicao"></div>
+
+                    <div class="contentor hero-conteudo">
+                        <span class="etiqueta-hero">
+                            PREVENÇÃO E SAÚDE ORAL
+                        </span>
+
+                        <h2>
+                            Cuide hoje do seu sorriso.
+                        </h2>
+
+                        <p>
+                            A prevenção e a avaliação profissional
+                            ajudam a cuidar da saúde dos seus dentes.
+                        </p>
+
+                        <div class="hero-botoes">
+                            <a href="#servicos" class="botao botao-principal">
+                                Explorar tratamentos
+                            </a>
+
+                            <a href="#marcacao" class="botao botao-secundario">
+                                Marcar consulta
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <button
+                class="hero-seta hero-anterior"
+                id="hero-anterior"
+                type="button"
+                aria-label="Imagem anterior"
+            >
+                &#10094;
+            </button>
+
+            <button
+                class="hero-seta hero-seguinte"
+                id="hero-seguinte"
+                type="button"
+                aria-label="Imagem seguinte"
+            >
+                &#10095;
+            </button>
+
+            <div
+                class="hero-indicadores"
+                id="hero-indicadores"
+                aria-label="Escolher imagem"
+            ></div>
+
+            <button
+                class="hero-pausa"
+                id="hero-pausa"
+                type="button"
+                aria-pressed="false"
+            >
+                Pausar apresentação
+            </button>
+
+        </section>
+
+        <!-- SOBRE NÓS -->
+        <section class="secao sobre" id="sobre">
+            <div class="contentor sobre-grelha">
+
+                <div class="sobre-imagem animar">
+                    <img
+                        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+                        alt="Espaço ilustrativo de uma clínica dentária moderna"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="sobre-texto animar">
+                    <span class="subtitulo">SOBRE A CLÍNICA</span>
+
+                    <h2>O seu sorriso merece os cuidados certos.</h2>
+
+                    <p>
+                        A Casa dos Dentes é um espaço dedicado à saúde oral,
+                        à prevenção e ao acompanhamento dos pacientes.
+                    </p>
+
+                    <p>
+                        Procuramos compreender as necessidades de cada
+                        pessoa e orientar os cuidados de acordo com a
+                        avaliação dos profissionais de saúde.
+                    </p>
+
+                    <a href="#contactos" class="botao botao-principal">
+                        Entre em contacto
+                    </a>
+                </div>
+
+            </div>
+        </section>
+<!-- SERVIÇOS -->
+<section class="secao secao-servicos" id="servicos">
+    <div class="contentor">
+
+        <div class="cabecalho-secao animar">
+            <span class="subtitulo">OS NOSSOS SERVIÇOS</span>
+
+            <h2>Conheça os tratamentos</h2>
+
+            <p>
+                Descubra algumas das áreas de cuidados de saúde oral.
+            </p>
+        </div>
+
+      
+<!-- FAIXA ANIMADA DE SERVIÇOS -->
+<div class="faixa-servicos" aria-label="Serviços dentários">
+    <div class="faixa-servicos-conteudo">
+
+        <!-- PRIMEIRO GRUPO -->
+        <div class="grupo-servicos">
+
+            <article class="item-faixa-servico">
+                <img src="https://private-us-east-1.manuscdn.com/sessionFile/If6p6HkeHThFzX4cGkmXKn/sandbox/DLim2UsijwZn3sPHbijOrE_1792953736262_na1fn_L2hvbWUvdWJ1bnR1L291dHB1dHMvbW9kZWxvX2RlbnRhcmlvX21hb3NfbmVncmFzX21lbGhvcmFkbw.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1794700800&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSWY2cDZIa2VIVGhGelg0Y0drbVhLbi9zYW5kYm94L0RMaW0yVXNpandabjNzUEhiaWpPckVfMTc5Mjk1MzczNjI2Ml9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDI5MWRIQjFkSE12Ylc5a1pXeHZYMlJsYm5SaGNtbHZYMjFoYjNOZmJtVm5jbUZ6WDIxbGJHaHZjbUZrYncucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfNDA5NixoXzQwOTYvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk0NzAwODAwfX19XX0_&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEQCIH9V2IV~cem8v0asYyv-lawL7PzjRLZnLNTVV7Vt3QQSAiAiS~lwMljSf3Dhl6PJ9RYI~0K8TbpmnsRMbmbKrVAb3Q__"
+                     alt="Prótese dentária removível" loading="lazy">
+                <h3>Prótese removível</h3>
+                <p>Substituição de dentes em falta através de uma prótese removível.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://drsergiocaetano.com.br/wp-content/uploads/2020/02/shutterstock_100725427.jpg"
+                     alt="Limpeza dentária" loading="lazy">
+                <h3>Lavagem</h3>
+                <p>Cuidados de limpeza para ajudar a manter os dentes limpos e a boca saudável.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://images.openai.com/static-rsc-4/36kal0yOUlEwtWUQ7JMFVgrMHtAHhPK724_-C2CTt_fnK8cKg4hDpFnJzzSQs4J6YpJt4hWPZTv9CO748kzMJZu1OyRbij8jL7ZpK0SjQt971UyNEmIlEW8QwRrI2r6xoBJ281wwdts0F_5nKIBcmg_pVncKjlTMYnjWThaT5GemzoQQAbtCt2GUkSHPE-m_?purpose=fullsize"
+                     alt="Remoção profissional do tártaro" loading="lazy">
+                <h3>Destartarização</h3>
+                <p>Remoção profissional do tártaro acumulado nos dentes.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://i.pinimg.com/1200x/38/34/7f/38347fc72c585a3eb1566d630797f9b9.jpg"
+                     alt="https://i.pinimg.com/1200x/38/34/7f/38347fc72c585a3eb1566d630797f9b9.jpg" loading="lazy">
+                <h3>Prótese fixa adesiva</h3>
+                <p>Reposição de dentes em falta através de uma prótese fixa, quando indicada.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://i.pinimg.com/736x/7a/a9/2f/7aa92f60125c4ad3a9193da2c448c1f0.jpg"
+                     alt="Restauração dentária" loading="lazy">
+                <h3>Restauração</h3>
+                <p>Reparação de dentes afectados por cáries ou outros danos.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://saevo.com.br/wp-content/uploads/2022/10/extracao-de-dente-inflamado-scaled.jpg"
+                     alt="Procedimento de extração dentária" loading="lazy">
+                <h3>Extração dentária</h3>
+                <p>Remoção de um dente quando existe indicação clínica.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWEQDiTo-_VmTFwvcn6TgzBCjvYFLtzE7Vy1ur0Zxmw&s=10"
+                     alt="Tratamento de canal" loading="lazy">
+                <h3>Tratamento de canal</h3>
+                <p>Tratamento do interior do dente para ajudar a preservá-lo.</p>
+                <span class="nome-alternativo">Endodontia</span>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://private-us-east-1.manuscdn.com/sessionFile/If6p6HkeHThFzX4cGkmXKn/sandbox/YG1oGfIH13znqxypSmVRYg_1792955380972_na1fn_L2hvbWUvdWJ1bnR1L291dHB1dHMvYm9jYV9tdWxoZXJfbmVncmFfZGVudGVzX2JyYW5jb3M.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1794700800&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSWY2cDZIa2VIVGhGelg0Y0drbVhLbi9zYW5kYm94L1lHMW9HZklIMTN6bnF4eXBTbVZSWWdfMTc5Mjk1NTM4MDk3Ml9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDI5MWRIQjFkSE12WW05allWOXRkV3hvWlhKZmJtVm5jbUZmWkdWdWRHVnpYMkp5WVc1amIzTS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd180MDk2LGhfNDA5Ni9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQ3MDA4MDB9fX1dfQ__&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEQCIAitY138zEOs~5K6c64ZTvEg1lNSs-TMH4GnKKIZNUfTAiAOSxUqFWhgoYvr7C5Ib4mjZSXga51V0Bbp0Icu3vqafA__"
+                     alt="Branqueamento dentário" loading="lazy">
+                <h3>Branqueamento dentário</h3>
+                <p>Procedimento para clarear a cor dos dentes após avaliação clínica.</p>
+            </article>
+            <article class="item-faixa-servico">
+                <img src="https://i.pinimg.com/736x/f5/ac/2a/f5ac2ac7ce672908cb5c25de2515fcb8.jpg"
+                     alt="Prótese dentária removível" loading="lazy">
+                <h3>Aparelho ortodôntico</h3>
+                <p>O aparelho ortodôntico ajuda a alinhar os dentes, corrigir a mordida e melhorar a estética do sorriso, promovendo uma melhor saúde oral e mais confiança ao sorrir.</p>
+            </article>
+
+        </div>
+
+        <!-- SEGUNDO GRUPO: REPETIÇÃO PARA MOVIMENTO CONTÍNUO -->
+        <div class="grupo-servicos" aria-hidden="true">
+
+            <article class="item-faixa-servico">
+                <img src="https://private-us-east-1.manuscdn.com/sessionFile/If6p6HkeHThFzX4cGkmXKn/sandbox/DLim2UsijwZn3sPHbijOrE_1792953736262_na1fn_L2hvbWUvdWJ1bnR1L291dHB1dHMvbW9kZWxvX2RlbnRhcmlvX21hb3NfbmVncmFzX21lbGhvcmFkbw.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1794700800&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSWY2cDZIa2VIVGhGelg0Y0drbVhLbi9zYW5kYm94L0RMaW0yVXNpandabjNzUEhiaWpPckVfMTc5Mjk1MzczNjI2Ml9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDI5MWRIQjFkSE12Ylc5a1pXeHZYMlJsYm5SaGNtbHZYMjFoYjNOZmJtVm5jbUZ6WDIxbGJHaHZjbUZrYncucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfNDA5NixoXzQwOTYvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk0NzAwODAwfX19XX0_&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEQCIH9V2IV~cem8v0asYyv-lawL7PzjRLZnLNTVV7Vt3QQSAiAiS~lwMljSf3Dhl6PJ9RYI~0K8TbpmnsRMbmbKrVAb3Q__" alt="">
+                <h3>Prótese removível</h3>
+                <p>Substituição de dentes em falta através de uma prótese removível.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://drsergiocaetano.com.br/wp-content/uploads/2020/02/shutterstock_100725427.jpg" alt="">
+                <h3>Lavagem</h3>
+                <p>Cuidados de limpeza para ajudar a manter os dentes limpos e a boca saudável.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://images.openai.com/static-rsc-4/36kal0yOUlEwtWUQ7JMFVgrMHtAHhPK724_-C2CTt_fnK8cKg4hDpFnJzzSQs4J6YpJt4hWPZTv9CO748kzMJZu1OyRbij8jL7ZpK0SjQt971UyNEmIlEW8QwRrI2r6xoBJ281wwdts0F_5nKIBcmg_pVncKjlTMYnjWThaT5GemzoQQAbtCt2GUkSHPE-m_?purpose=fullsize" alt="">
+                <h3>Destartarização</h3>
+                <p>Remoção profissional do tártaro acumulado nos dentes.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://i.pinimg.com/1200x/38/34/7f/38347fc72c585a3eb1566d630797f9b9.jpg" alt="">
+                <h3>Prótese fixa adesiva</h3>
+                <p>Reposição de dentes em falta através de uma prótese fixa, quando indicada.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://i.pinimg.com/736x/f9/44/d0/f944d0446c4963af2c447d005cee5206.jpg" alt="">
+                <h3>Restauração</h3>
+                <p>Reparação de dentes afectados por cáries ou outros danos.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="" alt="">
+                <h3>Extração dentária</h3>
+                <p>Remoção de um dente quando existe indicação clínica.</p>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCeVwK2mmnn5AqWqdUcDNRJVlu-8ToYx5ZixAuyNrSaJ-Zf_sMjxoIJFI&s=10" alt="">
+                <h3>Tratamento de canal</h3>
+                <p>Tratamento do interior do dente para ajudar a preservá-lo.</p>
+                <span class="nome-alternativo">Endodontia</span>
+            </article>
+
+            <article class="item-faixa-servico">
+                <img src="https://private-us-east-1.manuscdn.com/sessionFile/If6p6HkeHThFzX4cGkmXKn/sandbox/YG1oGfIH13znqxypSmVRYg_1792955380972_na1fn_L2hvbWUvdWJ1bnR1L291dHB1dHMvYm9jYV9tdWxoZXJfbmVncmFfZGVudGVzX2JyYW5jb3M.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1794700800&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSWY2cDZIa2VIVGhGelg0Y0drbVhLbi9zYW5kYm94L1lHMW9HZklIMTN6bnF4eXBTbVZSWWdfMTc5Mjk1NTM4MDk3Ml9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDI5MWRIQjFkSE12WW05allWOXRkV3hvWlhKZmJtVm5jbUZmWkdWdWRHVnpYMkp5WVc1amIzTS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd180MDk2LGhfNDA5Ni9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQ3MDA4MDB9fX1dfQ__&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEQCIAitY138zEOs~5K6c64ZTvEg1lNSs-TMH4GnKKIZNUfTAiAOSxUqFWhgoYvr7C5Ib4mjZSXga51V0Bbp0Icu3vqafA__" alt="">
+                <h3>Branqueamento dentário</h3>
+                <p>Procedimento para clarear a cor dos dentes após avaliação clínica.</p>
+            </article>
+
+        </div>
+
+    </div>
+</div>
+<!-- FIM DA FAIXA ANIMADA -->
+
+
+        <!-- PAINEL PARA MOSTRAR UM DETALHE DE CADA VEZ -->
+        <section
+            class="painel-detalhes-servico"
+            id="painel-detalhes-servico"
+            aria-label="Detalhes dos serviços"
+            aria-hidden="true"
+            hidden
+        >
+            <div class="conteudo-detalhes-servico">
+
+                <span
+                    class="subtitulo"
+                    id="etiqueta-detalhe-servico"
+                ></span>
+
+                <h3 id="titulo-detalhe-servico"></h3>
+
+                <div
+                    class="apresentacao-detalhe-servico"
+                    id="detalhe-servico-conteudo"
+                    aria-live="polite"
+                >
+                    <!-- O JavaScript colocará aqui o detalhe ativo. -->
+                </div>
+
+                <div
+                    class="indicadores-detalhe-servico"
+                    id="indicadores-detalhe-servico"
+                    aria-label="Progresso dos detalhes"
+                >
+                    <!-- O JavaScript criará os indicadores. -->
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+</section>
+
+
+        <!-- EQUIPA -->
+        <section class="secao secao-equipa" id="equipa">
+            <div class="contentor">
+
+                <div class="cabecalho-secao animar">
+                    <span class="subtitulo">A NOSSA EQUIPA</span>
+
+                    <h2>Profissionais ao cuidado do seu sorriso</h2>
+
+                    <p>
+                        Conheça os profissionais que acompanham os nossos pacientes.
+                    </p>
+                </div>
+
+                <div class="equipa-grelha">
+
+                    <!-- PROFISSIONAL 1 -->
+                    <article class="cartao-equipa animar">
+                        <img
+                            src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                            alt="Fotografia ilustrativa de um profissional de saúde"
+                            loading="lazy"
+                        >
+
+                        <div class="equipa-texto">
+                            <h3>Nome do profissional</h3>
+                            <p>Área de especialidade</p>
+                        </div>
+                    </article>
+
+                    <!-- PROFISSIONAL 2 -->
+                    <article class="cartao-equipa animar">
+                        <img
+                            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                            alt="Fotografia ilustrativa de uma profissional de saúde"
+                            loading="lazy"
+                        >
+
+                        <div class="equipa-texto">
+                            <h3>Nome do profissional</h3>
+                            <p>Área de especialidade</p>
+                        </div>
+                    </article>
+
+                    <!-- PROFISSIONAL 3 -->
+                    <article class="cartao-equipa animar">
+                        <img
+                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                            alt="Fotografia ilustrativa de um profissional de saúde"
+                            loading="lazy"
+                        >
+
+                        <div class="equipa-texto">
+                            <h3>Nome do profissional</h3>
+                            <p>Área de especialidade</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        
+<!-- ========================================
+     PERGUNTAS FREQUENTES
+======================================== -->
+
+<section class="perguntas-frequentes" id="perguntas-frequentes">
+    <div class="contentor">
+
+        <div class="titulo-seccao">
+            <span class="subtitulo">CUIDAMOS DO SEU SORRISO</span>
+            <h2>Dúvidas frequentes sobre a saúde oral</h2>
+            <p>
+                Encontre respostas simples para algumas das dúvidas
+                mais comuns sobre os cuidados com os seus dentes.
+            </p>
+        </div>
+
+        <div class="lista-perguntas">
+
+            <article class="pergunta-item">
+                <button class="pergunta-botao"
+                        type="button"
+                        aria-expanded="false">
+                    <span>O seu dente dói quando escova?</span>
+                    <span class="pergunta-icone" aria-hidden="true">+</span>
+                </button>
+
+                <div class="resposta-pergunta" hidden>
+                    <p>
+                        A dor pode estar relacionada com sensibilidade dentária,
+                        cáries ou problemas nas gengivas. Evite escovar com força
+                        e procure uma avaliação dentária para identificar a causa.
+                    </p>
+                    <a href="#marcacao" class="botao-pergunta">
+                        Marque já a sua consulta
+                    </a>
+                </div>
+            </article>
+
+            <article class="pergunta-item">
+                <button class="pergunta-botao"
+                        type="button"
+                        aria-expanded="false">
+                    <span>Quantas vezes por dia devo escovar os dentes?</span>
+                    <span class="pergunta-icone" aria-hidden="true">+</span>
+                </button>
+
+                <div class="resposta-pergunta" hidden>
+                    <p>
+                        Escove os dentes pelo menos duas vezes por dia,
+                        durante cerca de dois minutos, usando pasta dentífrica
+                        com flúor.
+                    </p>
+                    <a href="#marcacao" class="botao-pergunta">
+                        Marque já a sua consulta
+                    </a>
+                </div>
+            </article>
+
+            <article class="pergunta-item">
+                <button class="pergunta-botao"
+                        type="button"
+                        aria-expanded="false">
+                    <span>É normal as gengivas sangrarem ao escovar?</span>
+                    <span class="pergunta-icone" aria-hidden="true">+</span>
+                </button>
+
+                <div class="resposta-pergunta" hidden>
+                    <p>
+                        Não ignore o sangramento. Pode ser sinal de inflamação
+                        das gengivas. Escove suavemente e marque uma avaliação
+                        com um profissional de saúde oral.
+                    </p>
+                    <a href="#marcacao" class="botao-pergunta">
+                        Marque já a sua consulta
+                    </a>
+                </div>
+            </article>
+
+            <article class="pergunta-item">
+                <button class="pergunta-botao"
+                        type="button"
+                        aria-expanded="false">
+                    <span>Quando devo consultar um dentista?</span>
+                    <span class="pergunta-icone" aria-hidden="true">+</span>
+                </button>
+
+                <div class="resposta-pergunta" hidden>
+                    <p>
+                        É importante fazer consultas regulares, mesmo sem dor.
+                        Se sentir dor persistente, inchaço ou notar sangramento
+                        frequente, procure assistência dentária.
+                    </p>
+                    <a href="#marcacao" class="botao-pergunta">
+                        Marque já a sua consulta
+                    </a>
+                </div>
+            </article>
+
+            <article class="pergunta-item">
+                <button class="pergunta-botao"
+                        type="button"
+                        aria-expanded="false">
+                    <span>O branqueamento dentário é seguro?</span>
+                    <span class="pergunta-icone" aria-hidden="true">+</span>
+                </button>
+
+                <div class="resposta-pergunta" hidden>
+                    <p>
+                        Pode ser seguro quando indicado e acompanhado por um
+                        profissional. Antes do tratamento, é importante avaliar
+                        a saúde dos dentes e das gengivas.
+                    </p>
+                    <a href="#marcacao" class="botao-pergunta">
+                        Marque já a sua consulta
+                    </a>
+                </div>
+            </article>
+
+            <article class="pergunta-item">
+                <button class="pergunta-botao"
+                        type="button"
+                        aria-expanded="false">
+                    <span>O que devo fazer quando tenho dor de dentes?</span>
+                    <span class="pergunta-icone" aria-hidden="true">+</span>
+                </button>
+
+                <div class="resposta-pergunta" hidden>
+                    <p>
+                        Não ignore a dor nem tome medicamentos por conta própria.
+                        Procure uma avaliação dentária. Se tiver inchaço importante,
+                        febre ou dificuldade em engolir ou respirar, procure
+                        atendimento urgente.
+                    </p>
+                    <a href="#marcacao" class="botao-pergunta">
+                        Marque já a sua consulta
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- MARCAÇÃO -->
+        <section class="secao secao-marcacao" id="marcacao">
+            <div class="contentor">
+
+                <div class="cabecalho-secao animar">
+                    <span class="subtitulo">MARCAÇÃO</span>
+
+                    <h2>Solicite a sua consulta</h2>
+
+                    <p>
+                        Preencha os dados para preparar o seu pedido de marcação.
+                    </p>
+                </div>
+
+                <form
+                    class="formulario-marcacao animar"
+                    id="formulario-marcacao"
+                >
+
+                    <div class="campo-formulario">
+                        <label for="nome">Nome completo</label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            autocomplete="name"
+                            placeholder="Introduza o seu nome"
+                            required
+                            minlength="2"
+                        >
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="telefone">Número de telefone</label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            autocomplete="tel"
+                            placeholder="Introduza o seu telefone"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="servico">Serviço pretendido</label>
+
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="Consulta de avaliação">
+                                Consulta de avaliação
+                            </option>
+                            <option value="Higiene oral">Higiene oral</option>
+                            <option value="Ortodontia">Ortodontia</option>
+                            <option value="Estética dentária">
+                                Estética dentária
+                            </option>
+                            <option value="Outro serviço">Outro serviço</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="data">Data pretendida</label>
+
+                        <input
+                            type="date"
+                            id="data"
+                            name="data"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-formulario campo-completo">
+                        <label for="mensagem">Mensagem (opcional)</label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="4"
+                            placeholder="Escreva uma mensagem..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="botao botao-principal">
+                        Continuar pelo WhatsApp
+                    </button>
+
+                    <p
+                        class="mensagem-formulario"
+                        id="mensagem-formulario"
+                        aria-live="polite"
+                        role="status"
+                    ></p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTACTOS E MAPA -->
+        <section class="secao secao-contactos" id="contactos">
+            <div class="contentor">
+
+                <div class="cabecalho-secao animar">
+                    <span class="subtitulo">CONTACTOS</span>
+
+                    <h2>Estamos disponíveis para o atender</h2>
+
+                    <p>
+                        Consulte os nossos contactos e obtenha indicações
+                        para chegar à clínica.
+                    </p>
+                </div>
+
+                <div class="contactos-grelha">
+
+                    <div class="contacto-item animar">
+                        <span class="contacto-icone" aria-hidden="true">☎</span>
+                        <h3>Telefone</h3>
+                        <p>(+244) 940 273 624 <br>(+244) 938 079 317</p>
+                    </div>
+
+                    <div class="contacto-item animar">
+                        <span class="contacto-icone" aria-hidden="true">✉</span>
+                        <h3>E-mail</h3>
+                        <p>casadosdentes@gmail.com</p>
+                    </div>
+
+                    <div class="contacto-item animar">
+                        <span class="contacto-icone" aria-hidden="true">⌖</span>
+                        <h3>Morada</h3>
+                        <p> Rua das Flores, Cidade Alta, Huambo</p>
+                    </div>
+
+                </div>
+
+                <div class="mapa-container animar">
+                    <iframe
+                        src="https://www.google.com/maps?q=Casa%20dos%20Dentes&output=embed"
+                        title="Mapa de pesquisa da Casa dos Dentes"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                <p class="nota-mapa">
+                    A localização apresentada deverá ser confirmada
+                    e substituída pela morada real da clínica.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="contentor rodape-conteudo">
+
+            <a href="#inicio" class="rodape-marca">
+                Casa dos Dentes
+            </a>
+
+            <p>
+                Saúde oral, prevenção e cuidado com o seu sorriso.
+            </p>
+
+            <p class="direitos">
+                © <span id="ano-atual"></span> Casa dos Dentes.
+                Todos os direitos reservados.
+            </p>
+           
+<p class="credito-site">
+    Site desenvolvido pela Empresa
+    <a
+        href="https://www.instagram.com/besmart.angola/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visitar o Instagram da BE SMART"
+        class="link-logo-besmart"
+    >
+        <img
+            src="https://scontent-cpt1-1.cdninstagram.com/v/t51.82787-19/656861443_17857485756682247_3629715717646316664_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=110&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDI0LkMzIn0%3D&_nc_ohc=rB8eWhwH3xoQ7kNvwE7Qdqc&_nc_oc=AdoQduM7BIsrR4plo_KS3Kr1ONNiTKS-e0W4PCApt74wzgokIoEJSdtRFuadEsiVVM4uH6MyeY4zqLiD7mnG7w-X&_nc_zt=24&_nc_ht=scontent-cpt1-1.cdninstagram.com&_nc_gid=W5Ot6sEpJ5zJA04g-6SA5Q&_nc_ss=7b689&oh=00_AQPgm-h0uC3sDpHlmq6v30bbIR27CrRaH-_qjnkC80HJrw&oe=6AE4824F"
+            alt="BE SMART"
+            class="logo-besmart-rodape"
+        >
+    </a>
+</p>
+
+        </div>
+        <!-- ADICIONAR AQUI A EMPRESA BES MART-->
+        
+    </footer>
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+
+    <a
+        class="whatsapp-flutuante"
+        id="whatsapp-flutuante"
+        href="#contactos"
+        aria-label="Consultar os contactos da Casa dos Dentes"
+        title="Consulte os contactos da clínica"
+    >
+        <svg
+            viewBox="0 0 24 24"
+            width="30"
+            height="30"
+            fill="currentColor"
+            aria-hidden="true"
+        >
+            <path d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.16 1.6 5.97L0 24l6.25-1.64a11.9 11.9 0 0 0 5.82 1.52h.01C18.66 23.88 24 18.53 24 11.95a11.85 11.85 0 0 0-3.48-8.47ZM12.08 21.86a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.71.97.99-3.62-.24-.37a9.88 9.88 0 1 1 6.65 4.61Zm5.42-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.93 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.75-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.27-.2-.57-.35Z"/>
+        </svg>
+    </a>
+
+</body>
+</html>

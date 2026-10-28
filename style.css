@@ -1,0 +1,1815 @@
+
+/* ==========================================
+   CASA DOS DENTES — ESTILOS PRINCIPAIS
+   HTML + CSS + JAVASCRIPT
+========================================== */
+
+/* 1. CORES E CONFIGURAÇÕES GERAIS */
+
+:root {
+    --azul-profundo: #0B2239;
+    --azul-secundario: #123650;
+    --azul-principal: #1261A0;
+    --azul-claro: #EAF5FC;
+    --verde-agua: #27B9A8;
+    --branco: #FFFFFF;
+    --cinza-fundo: #F6F9FC;
+    --cinza-texto: #64748B;
+    --texto-escuro: #172B3A;
+    --borda: #E2E8F0;
+
+    --sombra-suave: 0 8px 28px rgba(11, 34, 57, .08);
+    --sombra-forte: 0 18px 38px rgba(11, 34, 57, .14);
+
+    --raio-cartao: 18px;
+    --largura-maxima: 1120px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(
+        120deg,
+        #FFFFFF,
+        #EAF5FC,
+        #D6EAF8,
+        #FFFFFF,
+        #EAF5FC
+    );
+    background-size: 300% 300%;
+    animation: fundo-azul-branco 18s ease infinite;
+    color: var(--texto-escuro);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--verde-agua);
+    outline-offset: 4px;
+}
+
+.contentor {
+    width: min(90%, var(--largura-maxima));
+    margin-inline: auto;
+}
+
+.secao {
+    padding: 100px 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--azul-profundo);
+}
+
+h1 {
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+}
+
+h2 {
+    font-size: clamp(1.9rem, 3.5vw, 3rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    color: var(--cinza-texto);
+}
+
+.subtitulo {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--azul-principal);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* 2. CABEÇALHO */
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 1500;
+    background: rgba(255, 255, 255, .97);
+    border-bottom: 1px solid rgba(226, 232, 240, .8);
+    box-shadow: 0 3px 15px rgba(11, 34, 57, .04);
+    backdrop-filter: blur(12px);
+}
+
+.cabecalho-conteudo {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logotipo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.marca-texto {
+    color: var(--azul-profundo);
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu-principal > a:not(.botao) {
+    color: var(--texto-escuro);
+    font-size: .88rem;
+    font-weight: 500;
+    transition: color .25s ease;
+}
+
+.menu-principal > a:not(.botao):hover {
+    color: var(--azul-principal);
+}
+
+.botao-menu {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: var(--branco);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.botao-menu span {
+    width: 21px;
+    height: 2px;
+    background: var(--azul-profundo);
+    transition: transform .25s ease, opacity .25s ease;
+}
+
+.botao-menu[aria-expanded="true"] span:first-child {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.botao-menu[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.botao-menu[aria-expanded="true"] span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* 3. BOTÕES */
+
+.botao {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 24px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: .9rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.botao-principal {
+    background: var(--azul-principal);
+    color: var(--branco);
+}
+
+.botao-principal:hover {
+    background: var(--azul-profundo);
+}
+
+.botao-secundario {
+    border-color: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .08);
+    color: var(--branco);
+}
+
+.botao-secundario:hover {
+    background: var(--branco);
+    color: var(--azul-profundo);
+}
+
+.botao-menu-consulta {
+    min-height: 42px;
+    padding: 10px 17px;
+    background: var(--azul-principal);
+    color: var(--branco);
+}
+
+/* 4. CARROSSEL PRINCIPAL */
+
+.hero {
+    position: relative;
+    min-height: 620px;
+    height: min(720px, calc(100svh - 88px));
+    overflow: hidden;
+    background: var(--azul-profundo);
+    isolation: isolate;
+}
+
+.hero-slides {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out,
+        visibility 1.5s ease-in-out;
+}
+
+.hero-slide.ativo {
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+}
+
+.hero-imagem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+}
+
+.hero-sobreposicao {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(5, 23, 39, .91) 0%,
+        rgba(5, 23, 39, .75) 45%,
+        rgba(5, 23, 39, .25) 100%
+    );
+}
+
+.hero-conteudo {
+    padding-top: 40px;
+    padding-bottom: 75px;
+    color: var(--branco);
+}
+
+.etiqueta-hero {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 7px 13px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 30px;
+    color: var(--branco);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+}
+
+.hero-conteudo h1,
+.hero-conteudo h2 {
+    max-width: 760px;
+    margin-bottom: 22px;
+    color: var(--branco);
+    text-wrap: balance;
+}
+
+.hero-conteudo p {
+    max-width: 610px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, .9);
+    font-size: 1.08rem;
+}
+
+.hero-botoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-seta {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    background: rgba(11, 34, 57, .45);
+    color: var(--branco);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background .25s ease, transform .25s ease;
+}
+
+.hero-seta:hover {
+    background: var(--azul-principal);
+}
+
+.hero-anterior {
+    left: 24px;
+}
+
+.hero-seguinte {
+    right: 24px;
+}
+
+.hero-indicadores {
+    position: absolute;
+    z-index: 6;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-indicador {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, .55);
+    cursor: pointer;
+    transition: width .3s ease, background .3s ease;
+}
+
+.hero-indicador.ativo {
+    width: 32px;
+    background: var(--verde-agua);
+}
+
+.hero-pausa {
+    position: absolute;
+    z-index: 6;
+    right: 24px;
+    bottom: 21px;
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 7px;
+    background: rgba(11, 34, 57, .65);
+    color: var(--branco);
+    font-size: .75rem;
+    cursor: pointer;
+}
+
+/* 5. TÍTULOS DAS SECÇÕES */
+
+.cabecalho-secao {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.cabecalho-secao h2 {
+    margin-bottom: 16px;
+}
+
+.cabecalho-secao p {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+/* 6. SOBRE NÓS */
+
+.sobre-grelha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.sobre-imagem {
+    overflow: hidden;
+    border-radius: 22px;
+    background: var(--azul-claro);
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.sobre-imagem:hover img {
+    transform: scale(1.035);
+}
+
+.sobre-texto h2 {
+    margin-bottom: 24px;
+}
+
+.sobre-texto p {
+    margin-bottom: 17px;
+}
+
+.sobre-texto .botao {
+    margin-top: 10px;
+}
+
+/* 7. TRATAMENTOS */
+
+.secao-servicos {
+    background: var(--cinza-fundo);
+    
+/* CARROSSEL DE IMAGENS DOS SERVIÇOS */
+
+.carrossel-imagens-servico {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    background: var(--cinza-fundo);
+}
+
+.carrossel-imagens-servico .imagem-carrossel-servico {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.02);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        visibility 0.6s ease;
+}
+
+.carrossel-imagens-servico
+.imagem-carrossel-servico.ativa {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Respeitar utilizadores que preferem menos movimento */
+
+@media (prefers-reduced-motion: reduce) {
+    .carrossel-imagens-servico
+    .imagem-carrossel-servico {
+        transition: none;
+    }
+}
+
+}
+
+.carrossel-cartoes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    overflow: visible;
+    padding: 8px 0 22px;
+}
+
+.cartao-conteudo {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-cartao);
+    background: var(--branco);
+    box-shadow: 0 5px 20px rgba(11, 34, 57, .04);
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.cartao-conteudo img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    transition: transform .65s ease;
+    
+/* ==========================================
+   CARROSSÉIS AUTOMÁTICOS DOS SERVIÇOS
+========================================== */
+
+.cartao-conteudo .carrossel-imagens-servico {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    background: var(--cinza-fundo);
+}
+
+.cartao-conteudo .imagem-carrossel-servico {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+}
+
+.cartao-conteudo .imagem-carrossel-servico.ativa {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Evita que o efeito hover altere o tamanho das imagens */
+.cartao-conteudo:hover .imagem-carrossel-servico {
+    transform: none;
+}
+
+/* Acessibilidade: respeitar a preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    .cartao-conteudo .imagem-carrossel-servico {
+        transition: none;
+    }
+}
+
+}
+
+.cartao-texto {
+    flex: 1;
+    padding: 24px;
+}
+
+.cartao-texto h3 {
+    margin-bottom: 12px;
+    transition: color .25s ease;
+}
+
+.cartao-texto p {
+    font-size: .91rem;
+    line-height: 1.8;
+}
+
+.cartao-conteudo:hover {
+    transform: translateY(-7px);
+    border-color: #B5DCD7;
+    box-shadow: var(--sombra-forte);
+}
+
+.cartao-conteudo:hover img {
+    transform: scale(1.06);
+}
+
+.cartao-conteudo:hover h3 {
+    color: var(--azul-principal);
+}
+
+/* 8. EQUIPA */
+
+.secao-equipa {
+    background: var(--branco);
+}
+
+.equipa-grelha {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.cartao-equipa {
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-cartao);
+    background: var(--branco);
+    box-shadow: var(--sombra-suave);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.cartao-equipa:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-forte);
+}
+
+.cartao-equipa img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    background: var(--azul-claro);
+}
+
+.equipa-texto {
+    padding: 22px;
+    text-align: center;
+}
+
+.equipa-texto h3 {
+    margin-bottom: 8px;
+}
+
+.equipa-texto p {
+    font-size: .9rem;
+}
+
+/* 9. PERGUNTAS FREQUENTES */
+
+.perguntas-frequentes {
+    padding: 80px 0;
+    background: var(--cinza-fundo);
+}
+
+.perguntas-frequentes .titulo-seccao {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.perguntas-frequentes .titulo-seccao h2 {
+    margin-bottom: 16px;
+}
+
+.perguntas-frequentes .titulo-seccao p {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.perguntas-frequentes .subtitulo {
+    color: var(--azul-principal);
+}
+
+.lista-perguntas {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.pergunta-item {
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(11, 34, 57, .04);
+}
+
+.pergunta-botao {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px;
+    border: none;
+    background: transparent;
+    color: var(--azul-profundo);
+    text-align: left;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pergunta-botao:hover {
+    color: var(--azul-principal);
+}
+
+.pergunta-icone {
+    flex-shrink: 0;
+    color: var(--verde-agua);
+    font-size: 1.6rem;
+    transition: transform .2s ease;
+}
+
+.pergunta-botao[aria-expanded="true"] .pergunta-icone {
+    transform: rotate(45deg);
+}
+
+.resposta-pergunta[hidden] {
+    display: none;
+}
+
+.resposta-pergunta {
+    padding: 0 22px 24px;
+}
+
+.resposta-pergunta p {
+    margin: 0 0 20px;
+    line-height: 1.8;
+}
+
+.botao-pergunta {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 7px;
+    background: var(--azul-profundo);
+    color: var(--branco);
+    font-size: .95rem;
+    font-weight: 600;
+    transition: background .2s ease;
+}
+
+.botao-pergunta:hover {
+    background: var(--azul-principal);
+}
+
+/* 10. FORMULÁRIO DE MARCAÇÃO */
+
+.secao-marcacao {
+    background: var(--cinza-fundo);
+}
+
+.formulario-marcacao {
+    max-width: 760px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px;
+    padding: 35px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    background: var(--branco);
+    box-shadow: var(--sombra-suave);
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.campo-formulario label {
+    color: var(--azul-profundo);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    min-height: 49px;
+    padding: 12px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 9px;
+    background: var(--branco);
+    color: var(--texto-escuro);
+    font-size: .9rem;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.campo-formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    border-color: var(--azul-principal);
+    box-shadow: 0 0 0 3px rgba(18, 97, 160, .1);
+    outline: none;
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+    color: #94A3B8;
+}
+
+.campo-completo,
+.formulario-marcacao > .botao,
+.mensagem-formulario {
+    grid-column: 1 / -1;
+}
+
+.formulario-marcacao > .botao {
+    width: 100%;
+    border: none;
+}
+
+.mensagem-formulario {
+    min-height: 0;
+    font-size: .9rem;
+    overflow-wrap: anywhere;
+}
+
+.mensagem-formulario:not(:empty) {
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--azul-claro);
+}
+
+/* 11. CONTACTOS */
+
+.secao-contactos {
+    background: var(--branco);
+}
+
+.contactos-grelha {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 42px;
+}
+
+.contacto-item {
+    padding: 30px 22px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform .3s ease, border-color .3s ease;
+}
+
+.contacto-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--verde-agua);
+}
+
+.contacto-icone {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: var(--azul-claro);
+    color: var(--azul-principal);
+    font-size: 1.5rem;
+}
+
+.contacto-item h3 {
+    margin-bottom: 10px;
+}
+
+.contacto-item p {
+    font-size: .9rem;
+    overflow-wrap: anywhere;
+}
+
+.mapa-container {
+    min-height: 350px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    background: var(--cinza-fundo);
+}
+
+.mapa-container iframe {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: 0;
+}
+
+/* 12. RODAPÉ */
+
+.rodape {
+    padding: 48px 0;
+    background: var(--azul-profundo);
+    text-align: center;
+}
+
+.rodape-marca {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--branco);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.rodape p {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, .76);
+    font-size: .9rem;
+}
+
+.rodape .direitos {
+    margin-top: 20px;
+    font-size: .8rem;
+}
+
+/* 13. WHATSAPP FLUTUANTE */
+
+.whatsapp-flutuante {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    width: 62px;
+    height: 62px;
+    border: 2px solid rgba(255, 255, 255, .85);
+    border-radius: 50%;
+    background: #25D366;
+    color: var(--branco);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .22);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.whatsapp-flutuante:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .28);
+}
+
+.whatsapp-flutuante svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* 14. ANIMAÇÕES SEGURAS */
+
+/*
+   Por defeito, o conteúdo fica visível.
+   Só escondemos elementos quando o JavaScript
+   confirma que consegue ativar as animações.
+*/
+
+.animar {
+    opacity: 1;
+    transform: none;
+}
+
+body.animacoes-ativas .animar:not(.visivel) {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+body.animacoes-ativas .animar.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 15. TABLETS */
+
+@media (max-width: 1000px) {
+    .cabecalho-conteudo {
+        gap: 15px;
+    }
+
+    .menu-principal {
+        gap: 14px;
+    }
+
+    .menu-principal > a:not(.botao) {
+        font-size: .82rem;
+    }
+
+    .carrossel-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sobre-grelha {
+        gap: 35px;
+    }
+
+    .hero-seta {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 16. TELEMÓVEIS E TABLETS PEQUENOS */
+
+@media (max-width: 760px) {
+    html {
+        scroll-padding-top: 82px;
+    }
+
+    .secao {
+        padding: 72px 0;
+    }
+
+    .cabecalho-conteudo {
+        min-height: 76px;
+    }
+
+    .logotipo {
+        width: 46px;
+        height: 46px;
+    }
+
+    .marca-texto {
+        font-size: .95rem;
+    }
+
+    .botao-menu {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .menu-principal {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 5% 22px;
+        border-bottom: 1px solid var(--borda);
+        background: var(--branco);
+        box-shadow: 0 12px 20px rgba(11, 34, 57, .08);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+    }
+
+    .menu-principal.aberto {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .menu-principal > a:not(.botao) {
+        padding: 13px 4px;
+        border-bottom: 1px solid var(--borda);
+        font-size: .95rem;
+    }
+
+    .botao-menu-consulta {
+        margin-top: 14px;
+    }
+
+    .hero {
+        min-height: 590px;
+        height: min(700px, calc(100svh - 76px));
+    }
+
+    .hero-sobreposicao {
+        background: linear-gradient(
+            90deg,
+            rgba(5, 23, 39, .88),
+            rgba(5, 23, 39, .58)
+        );
+    }
+
+    .hero-conteudo {
+        padding-top: 30px;
+        padding-bottom: 75px;
+    }
+
+    .hero-conteudo p {
+        font-size: 1rem;
+    }
+
+    .hero-seta {
+        top: auto;
+        bottom: 70px;
+        transform: none;
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero-anterior {
+        left: 16px;
+    }
+
+    .hero-seguinte {
+        right: 16px;
+    }
+
+    .hero-indicadores {
+        bottom: 30px;
+    }
+
+    .hero-pausa {
+        right: 12px;
+        bottom: 12px;
+        font-size: .68rem;
+    }
+
+    .sobre-grelha {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .sobre-imagem img {
+        height: 340px;
+    }
+
+    .equipa-grelha {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cartao-equipa img {
+        height: 260px;
+    }
+
+    .contactos-grelha {
+        grid-template-columns: 1fr;
+    }
+
+    .perguntas-frequentes {
+        padding: 65px 0;
+    }
+}
+
+/* 17. TELEMÓVEIS PEQUENOS */
+
+@media (max-width: 560px) {
+    .contentor {
+        width: 92%;
+    }
+
+    .secao {
+        padding: 60px 0;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .hero-conteudo h1,
+    .hero-conteudo h2 {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .hero-conteudo p {
+        font-size: .94rem;
+    }
+
+    .hero-botoes {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .hero-botoes .botao {
+        width: 100%;
+    }
+
+    .carrossel-cartoes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cartao-conteudo img {
+        height: 235px;
+    }
+
+    .equipa-grelha {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-equipa img {
+        height: 320px;
+    }
+
+    .formulario-marcacao {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 22px;
+    }
+
+    .campo-completo,
+    .formulario-marcacao > .botao,
+    .mensagem-formulario {
+        grid-column: 1;
+    }
+
+    .mapa-container iframe {
+        height: 300px;
+    }
+
+    .whatsapp-flutuante {
+        right: 16px;
+        bottom: 16px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .whatsapp-flutuante svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .perguntas-frequentes {
+        padding: 55px 0;
+    }
+
+    .pergunta-botao {
+        padding: 18px;
+        font-size: .95rem;
+    }
+
+    .resposta-pergunta {
+        padding: 0 18px 20px;
+    }
+
+    .botao-pergunta {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* 18. ACESSIBILIDADE: MOVIMENTO REDUZIDO */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .animar,
+    body.animacoes-ativas .animar:not(.visivel) {
+        opacity: 1;
+        transform: none;
+    }
+
+    .cartao-conteudo:hover,
+    .cartao-equipa:hover,
+    .contacto-item:hover,
+    .whatsapp-flutuante:hover {
+        transform: none;
+    }
+
+    .cartao-conteudo:hover img,
+    .sobre-imagem:hover img {
+        transform: none;
+    }
+    }
+/* ==========================================
+   DETALHES INTERATIVOS DOS SERVIÇOS
+========================================== */
+.botao-detalhes-servico {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 20px;
+    border: 1px solid var(--azul-principal);
+    border-radius: 7px;
+    background: var(--azul-principal);
+    color: var(--branco);
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color .3s ease,
+        transform .3s ease;
+}
+
+.botao-detalhes-servico:hover {
+    background: var(--azul-profundo);
+    transform: translateY(-2px);
+}
+
+.botao-detalhes-servico:focus-visible {
+    outline: 3px solid var(--verde-agua);
+    outline-offset: 3px;
+}
+
+
+/* Painel dos detalhes — sobreposição aos cartões */
+
+.secao-servicos {
+    position: relative;
+}
+
+
+/* PAINEL DOS DETALHES DOS SERVIÇOS */
+
+.secao-servicos {
+    position: relative;
+}
+
+.painel-detalhes-servico {
+    position: absolute;
+    z-index: 100;
+    box-sizing: border-box;
+
+    display: block;
+    margin: 0;
+    padding: 18px;
+    overflow: hidden;
+
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-cartao);
+    box-shadow: 0 12px 35px rgba(11, 34, 57, .18);
+
+    opacity: 0;
+    transform: translateY(12px);
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        visibility .3s ease;
+}
+
+.painel-detalhes-servico[hidden] {
+    display: none !important;
+}
+
+.painel-detalhes-servico.painel-aberto {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+
+/* Painel dos detalhes — tamanho de um cartão */
+
+.painel-detalhes-servico {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    z-index: 100;
+
+    width: calc((100% - 66px) / 4);
+    box-sizing: border-box;
+
+    display: block;
+    max-height: 0;
+    margin: 0;
+    padding: 0 18px;
+    overflow: hidden;
+
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-cartao);
+    box-shadow: 0 12px 35px rgba(11, 34, 57, .18);
+
+    opacity: 0;
+    transform: translateY(12px);
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        max-height .35s ease,
+        opacity .3s ease,
+        transform .3s ease,
+        padding .3s ease,
+        visibility .3s ease;
+}
+
+.painel-detalhes-servico[hidden] {
+    display: none !important;
+}
+
+.painel-detalhes-servico.painel-aberto {
+    max-height: 650px;
+    padding: 18px;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Conteúdo do detalhe */
+
+.detalhe-unico {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detalhe-unico img {
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detalhe-texto h4 {
+    margin: 6px 0 8px;
+    font-size: 1rem;
+}
+
+.detalhe-texto p {
+    margin-bottom: 10px;
+    font-size: .85rem;
+    line-height: 1.6;
+}
+
+/* Botão sempre visível no cartão */
+
+.botao-marcar-detalhe {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 11px 12px;
+
+    border: none;
+    border-radius: 7px;
+    background: var(--azul-principal);
+    color: var(--branco);
+
+    font: inherit;
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-marcar-detalhe:hover {
+    background: var(--azul-profundo);
+}
+
+/* Transição entre detalhes */
+
+.apresentacao-detalhe-servico {
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.apresentacao-detalhe-servico.detalhe-em-transicao {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.apresentacao-detalhe-servico.detalhe-visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tablets: cartões em duas colunas */
+
+@media (max-width: 1000px) {
+    .painel-detalhes-servico {
+        top: 180px;
+        width: calc((100% - 22px) / 2);
+    }
+}
+
+/* Telemóveis: um cartão por linha */
+
+@media (max-width: 560px) {
+    .painel-detalhes-servico {
+        top: 150px;
+        width: 100%;
+    }
+
+    .detalhe-unico img {
+        height: 160px;
+    }
+}
+/* ==========================================
+   CASA DOS DENTES — FAIXA ANIMADA DE SERVIÇOS
+========================================== */
+
+.faixa-servicos {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 18px 0 28px;
+}
+
+.faixa-servicos-conteudo {
+    display: flex;
+    width: max-content;
+    animation: passagem-servicos 30s linear infinite;
+    will-change: transform;
+}
+
+.grupo-servicos {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+    gap: 22px;
+    padding-right: 22px;
+}
+
+.item-faixa-servico {
+    flex: 0 0 260px;
+    width: 260px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-cartao);
+    background: var(--branco);
+    box-shadow: 0 5px 20px rgba(11, 34, 57, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-faixa-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(11, 34, 57, 0.12);
+}
+
+.item-faixa-servico img {
+    display: block;
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.item-faixa-servico h3 {
+    margin: 17px 16px 9px;
+    color: var(--azul-escuro, #0B2239);
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.item-faixa-servico p {
+    margin: 0 16px 20px;
+    color: var(--texto-secundario, #64748B);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.nome-alternativo {
+    display: block;
+    margin: -12px 16px 18px;
+    color: var(--texto-secundario, #64748B);
+    font-size: 12px;
+}
+
+/* Movimento contínuo da esquerda para a direita */
+@keyframes passagem-servicos {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Pausar ao passar o rato ou navegar pela faixa */
+.faixa-servicos:hover .faixa-servicos-conteudo,
+.faixa-servicos:focus-within .faixa-servicos-conteudo {
+    animation-play-state: paused;
+}
+
+/* Adaptação para telemóveis */
+@media (max-width: 600px) {
+    .item-faixa-servico {
+        flex-basis: 225px;
+        width: 225px;
+    }
+
+    .item-faixa-servico img {
+        height: 155px;
+    }
+
+    .grupo-servicos {
+        gap: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Respeitar a preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    .faixa-servicos-conteudo {
+        animation: none;
+        transform: none;
+    }
+
+    .grupo-servicos[aria-hidden="true"] {
+        display: none;
+    }
+}
+
+
+
+/* FUNDO ANIMADO — CASA DOS DENTES */
+
+
+/* =====================================
+   CASA DOS DENTES — FUNDO DE ONDAS
+===================================== */
+
+body {
+    position: relative;
+    isolation: isolate;
+    background: #FFFFFF;
+}
+
+/* Ondas suaves em verde-água */
+
+/* Fundo com ondas fluidas mais visíveis */
+
+/* FUNDO ANIMADO MAIS VISÍVEL */
+
+
+/* FUNDO DA CASA DOS DENTES */
+body {
+    position: relative;
+    isolation: isolate;
+    background: #FFFFFF;
+}
+
+/* CAMADA DE BOLHAS REALISTAS */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle at 32% 25%,
+            rgba(255, 255, 255, 0.95) 0 5%,
+            rgba(39, 185, 168, 0.12) 18%,
+            transparent 72%),
+        radial-gradient(circle at 70% 35%,
+            rgba(255, 255, 255, 0.9) 0 4%,
+            rgba(39, 185, 168, 0.10) 20%,
+            transparent 72%);
+
+    background-size: 180px 180px, 240px 240px;
+    background-repeat: no-repeat;
+    animation: brilhoBolhas 8s ease-in-out infinite alternate;
+}
+
+/* BOLHAS COM CONTORNO E BRILHO */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle,
+            transparent 56%,
+            rgba(39, 185, 168, 0.25) 58%,
+            rgba(255, 255, 255, 0.9) 60%,
+            transparent 64%),
+        radial-gradient(circle,
+            transparent 55%,
+            rgba(39, 185, 168, 0.18) 58%,
+            rgba(255, 255, 255, 0.85) 60%,
+            transparent 65%),
+        radial-gradient(circle,
+            transparent 56%,
+            rgba(39, 185, 168, 0.20) 59%,
+            rgba(255, 255, 255, 0.9) 61%,
+            transparent 66%);
+
+    background-size: 54px 54px, 82px 82px, 38px 38px;
+    background-repeat: no-repeat;
+    background-position: 15% 100%, 65% 110%, 88% 95%;
+
+    animation: bolhasSubir 9s linear infinite;
+}
+
+/* BRILHO SUAVE */
+@keyframes brilhoBolhas {
+    from {
+        background-position: 10% 25%, 75% 65%;
+        opacity: 0.55;
+    }
+
+    to {
+        background-position: 35% 55%, 55% 20%;
+        opacity: 1;
+    }
+}
+
+/* BOLHAS A SUBIR */
+@keyframes bolhasSubir {
+    from {
+        background-position: 15% 110%, 65% 120%, 88% 105%;
+    }
+
+    to {
+        background-position: 25% -15%, 55% -20%, 78% -10%;
+    }
+}
+
+/* RESPEITAR PREFERÊNCIAS DE MOVIMENTO */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none;
+    }
+}
+
+
+
+/* Permitir que o fundo animado atravesse as secções */
+
+.secao-servicos,
+.secao-equipa,
+.perguntas-frequentes,
+.secao-marcacao,
+.secao-contactos {
+    background-color: transparent !important;
+}
+
+.credito-site {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.link-logo-besmart {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-besmart-rodape {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-besmart-rodape:hover {
+    transform: scale(1.1);
+}
+
