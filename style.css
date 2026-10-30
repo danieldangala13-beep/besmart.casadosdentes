@@ -677,11 +677,18 @@ p {
 }
 
 .cartao-equipa img {
+    display: block;
     width: 100%;
     height: 320px;
     object-fit: cover;
-    background: var(--azul-claro);
+    object-position: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
+
+
+
 
 .equipa-texto {
     padding: 22px;
@@ -930,6 +937,7 @@ p {
 
 .mapa-container {
     min-height: 350px;
+    height: 380px;
     overflow: hidden;
     border: 1px solid var(--borda);
     border-radius: 18px;
@@ -939,7 +947,7 @@ p {
 .mapa-container iframe {
     display: block;
     width: 100%;
-    height: 380px;
+    height: 100%;
     border: 0;
 }
 

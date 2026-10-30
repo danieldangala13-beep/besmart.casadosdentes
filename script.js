@@ -449,7 +449,7 @@ if (slides.length > 0) {
        o formulário não poderá abrir a conversa correta.
     */
 
-    const telefoneClinica = "244XXXXXXXXX";
+    const telefoneClinica = "244940273624";
 
     const botaoWhatsApp = document.querySelector(
         "#whatsapp-flutuante"
@@ -612,7 +612,28 @@ if (slides.length > 0) {
 
     if (anoAtual) {
         anoAtual.textContent = new Date().getFullYear();
-    }
+    
+    // Camada visual do mapa
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(mapa);
+
+    // Marcador da clínica
+    const marcador = L.marker([latitude, longitude]).addTo(mapa);
+
+    // Nome apresentado ao clicar no marcador
+    marcador.bindPopup(
+        "<strong>Casa dos Dentes</strong><br>Saúde e Sorriso"
+    );
+
+    // Abre automaticamente a identificação da clínica
+    marcador.openPopup();
+
+    // Corrige a apresentação do mapa quando necessário
+    setTimeout(function () {
+        mapa.invalidateSize();
+    }, 300);
+}
     const dadosServicos = {
 
         avaliacao: {
